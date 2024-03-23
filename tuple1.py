@@ -1,0 +1,10 @@
+ohtuple=("hyp","fyn","img",98,23)
+print(ohtuple)
+print(type(ohtuple))
+ohtuple=ohtuple+("ok",)
+print(ohtuple)
+ohtuple=ohtuple+(14,6,"hi")
+print(ohtuple)
+for i in range(0,5):
+    n=int(input("enter"))
+    ohtuple=ohtuple+(n,)

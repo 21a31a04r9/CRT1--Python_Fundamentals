@@ -1,0 +1,15 @@
+a=2
+b=2.3
+c="bindu"
+d=True
+e=2+5j
+print(a)
+print(b)
+print(c)
+print(d)
+print(e)
+print(type(a))
+print(type(b))
+print(type(c))
+print(type(d))
+print(type(e))
