@@ -1,55 +1,78 @@
-class carshowroom:
-    def _init_(self,cgst,sgst,insurance):
-        self.c=cgst
-        self.s=sgst
-        self.i=insurance
-        print(self.c,self.s,self.i)
-    def company(self,name):
-        self.n=name
-        print("welcome to ",self.n,"family")
-    def model(self):
-        a="maruthi"
-        b="MG"
-        c="hyundai"
-        a1="X"
-        a2="y"
-        b1="Z"
-        b2="I"
-        c1="O"
-        c2="H"
-        if self.n==a:
-            print(a1)
-            print(a2)
-        elif self.n==b:
-            print(b1)
-            print(b2)
-        elif self.n==c:
-            print(c1)
-            print(c2)
+class car_showroom:
+    def _init_(self):
+        self.C=0.06
+        self.S=0.03
+        self.I=21000
+    def company(self): 
+        while True:
+                print("Choose from Maruthi,MG,Hyundai")       
+                self.n=input("enter company:")
+                if self.n=="Maruthi":
+                    print("welcome to",self.n,"car family") 
+                    self.models()
+                    break
+                elif self.n=="MG":
+                     print("welcome to",self.n,"car family")
+                     self.models()
+                     break
+                elif self.n=="Hyundai":
+                     print("welcome to",self.n,"car family")
+                     self.models()
+                     break
+                else:
+                     print("enter valid company")
+    def models(self):
+        if self.n=="Maruthi":
+            while True:
+                print("select from Breeza,Baleno")
+                self.m=input("enter model:")
+                if self.m=="Breeza":
+                    self.price()
+                    break
+                self.m=input("enter model:")
+                if self.m=="Baleno":
+                    self.price()
+                    break
+        elif self.n=="MG":
+            while True:
+                print("select from Hector Plus,Hector")
+                self.m=input("enter model:")
+                if self.m=="Hector":
+                    self.price()
+                    break
+                self.m=input("enter model:")
+                if self.m=="Hector Plus":
+                    self.price()
+                    break
+        elif self.n=="Hyundai":
+            while True:
+               print("select from Fusion,Escape")
+               self.m=input("enter model:")
+               if self.m=="Fusion":
+                    self.price()
+                    break
+               self.m=input("enter model:")
+               if self.m=="Escape":
+                    self.price()
+                    break
+               self.price()
+               break
         else:
-            exit
-    t=input("company")
-
+                print("invalid company name.")
     def price(self):
-        if self.n==a and t==a1:
-            cost1=25
-            print(cost1+self.s+self.c+self.i)
-        elif self.n==a and t==a2:
-            cost2=30
-            print(cost2+self.c+self.s+self.i)
-        elif self.n==b and t==b1:
-            cost3=40
-            print(cost3+self.s+self.c+self.i)
-        elif self.n==b and t==b2:
-            cost4=50
-            print(cost4=self.s+self.c+self.i)
-        elif self.n==c and t==c1:
-            cost5=60
-            print(cost5+self.s+self.c+self.i)
-        elif self.n==c and t==c2:
-            cost6=70
-            print(cost7=self.s+self.c+self.i)
-p=carshowroom(1,2,3)
-p.company("MG")
-p.model()
-p.price()
+            if self.m=="Breeza":
+                self.p=1000000 
+            elif self.m=="Baleno":
+                self.p=2500000
+            elif self.m=="Hector Plus":
+                self.p=700000
+            elif self.m=="Hector":
+                self.p=630000
+            elif self.m=="Fusion":
+                self.p=680000
+            elif self.m=="Escape":
+                self.p=780000
+            total=self.p + self.C + self.S + self.I
+            print(total)
+obj=car_showroom()
+obj.company()
